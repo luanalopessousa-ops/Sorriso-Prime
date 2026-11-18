@@ -1,0 +1,394 @@
+
+/* Configurações gerais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f7fafc;
+    color: #173b4d;
+    line-height: 1.6;
+}
+
+/* Cabeçalho */
+header {
+    background-color: #ffffff;
+    padding: 25px 8%;
+    text-align: center;
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.06);
+}
+
+header h1 {
+    color: #087e8b;
+    font-size: 36px;
+}
+
+header p {
+    color: #64748b;
+    margin-bottom: 20px;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: #173b4d;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #087e8b;
+}
+
+/* Página inicial */
+#inicio {
+    min-height: 500px;
+    padding: 100px 10%;
+
+background:
+    linear-gradient(
+        rgba(10, 45, 58, 0.75),
+        rgba(10, 45, 58, 0.75)
+    ),
+    url("img/clinica.png");
+
+background-size: cover;
+background-position: center;
+background-repeat: no-repeat;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+#inicio h2 {
+    font-size: 46px;
+    max-width: 800px;
+    line-height: 1.2;
+    margin-bottom: 25px;
+}
+
+#inicio p {
+    font-size: 19px;
+    max-width: 650px;
+    color: #526575;
+    margin-bottom: 35px;
+}
+
+/* Botão principal */
+#inicio a {
+    display: inline-block;
+    background-color: #087e8b;
+    color: white;
+    padding: 16px 35px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+#inicio a:hover {
+    background-color: #065f69;
+    transform: translateY(-3px);
+}
+
+/* Seções */
+section {
+    padding: 80px 10%;
+}
+
+section h2 {
+    font-size: 34px;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+/* Tratamentos */
+#tratamentos {
+    background-color: #ffffff;
+    text-align: center;
+}
+
+/* Sobre */
+#sobre {
+    background-color: #eaf6f6;
+    text-align: center;
+}
+
+/* Contato */
+#contato {
+    background-color: #ffffff;
+    text-align: center;
+}
+
+/* Rodapé */
+footer {
+    background-color: #173b4d;
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 30px;
+    }
+
+    nav {
+        gap: 15px;
+    }
+
+    #inicio {
+        padding: 80px 20px;
+    }
+
+    #inicio h2 {
+        font-size: 32px;
+    }
+
+    section {
+        padding: 60px 20px;
+    }
+
+    section h2 {
+        font-size: 28px;
+    }
+}
+
+/* Cards de tratamentos */
+.tratamentos-descricao {
+    max-width: 650px;
+    margin: 0 auto 40px;
+    color: #526575;
+}
+
+.lista-tratamentos {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+
+.tratamento {
+    background-color: #f7fafc;
+    padding: 15px;
+    overflow: hidden;
+    border-radius: 14px;
+    border: 1px solid #dcebed;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s;
+}
+
+.tratamento:hover {
+    transform: translateY(-8px);
+}
+
+.tratamento h3 {
+    color: #087e8b;
+    margin-bottom: 15px;
+}
+
+.tratamento p {
+    color: #526575;
+    font-size: 15px;
+}
+
+/* Responsividade dos tratamentos */
+@media (max-width: 900px) {
+    .lista-tratamentos {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .lista-tratamentos {
+        grid-template-columns: 1fr;
+    }
+}
+
+.tratamento img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
+    display: block;
+    margin-bottom: 20px;
+}
+
+/* Sobre a clínica */
+.sobre-descricao {
+    max-width: 750px;
+    margin: 0 auto 40px;
+    color: #526575;
+    line-height: 1.8;
+}
+
+.diferenciais {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.diferencial {
+    background-color: #ffffff;
+    padding: 35px 25px;
+    border-radius: 14px;
+    border: 1px solid #dcebed;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s;
+}
+
+.diferencial:hover {
+    transform: translateY(-8px);
+}
+
+.diferencial span {
+    display: block;
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+.diferencial h3 {
+    color: #087e8b;
+    margin-bottom: 15px;
+}
+
+.diferencial p {
+    color: #526575;
+}
+
+/* Responsividade */
+@media (max-width: 700px) {
+    .diferenciais {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Contato */
+.contato-descricao {
+    max-width: 650px;
+    margin: 0 auto 40px;
+    color: #526575;
+}
+
+.contato-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin-bottom: 35px;
+}
+
+.contato-card {
+    background-color: #f7fafc;
+    padding: 30px 20px;
+    border: 1px solid #dcebed;
+    border-radius: 14px;
+}
+
+.contato-card span {
+    display: block;
+    font-size: 38px;
+    margin-bottom: 15px;
+}
+
+.contato-card h3 {
+    color: #087e8b;
+    margin-bottom: 15px;
+}
+
+.contato-card p {
+    color: #526575;
+    margin-bottom: 8px;
+}
+
+/* Botão de agendamento */
+#btn-agendamento {
+    background-color: #087e8b;
+    color: white;
+    border: none;
+    padding: 16px 35px;
+    border-radius: 30px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#btn-agendamento:hover {
+    background-color: #065f69;
+    transform: translateY(-3px);
+}
+
+/* Responsividade */
+@media (max-width: 800px) {
+    .contato-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Texto da página inicial sobre a fotografia */
+#inicio h2 {
+    color: #ffffff;
+}
+
+#inicio p {
+    color: #e5f4f5;
+}
+
+#inicio a {
+    background-color: #20b7a8;
+    color: #ffffff;
+}
+
+/* Acessibilidade */
+a:focus-visible,
+button:focus-visible {
+    outline: 3px solid #20b7a8;
+    outline-offset: 4px;
+}
+
+/* Melhor leitura em telas pequenas */
+@media (max-width: 600px) {
+    #inicio {
+        min-height: 450px;
+    }
+
+    #inicio p {
+        font-size: 16px;
+    }
+
+    #inicio a,
+    #btn-agendamento {
+        padding: 15px 25px;
+    }
+}
+
+/* Respeita preferência por menos animações */
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        transition: none !important;
+        animation: none !important;
+    }
+}
